@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DOXA Sports | Sports Wear, Casual Wear, Corporate Wear</title>
+<meta name="description" content="DOXA Sports: sports wear, casual wear and corporate wear with bulk manufacturing. Grand opening in Tirunelveli.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#F3F5FB;--surface:#fff;--ink:#0B1536;--mute:#4A5578;--line:#D8DDEC;--blue:#1634E8;--gold:#F4B400;--onblue:#fff;--head:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;--body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1128;--surface:#111B3D;--ink:#EEF1FA;--mute:#A4AFD0;--line:#26336B;--blue:#2F4BFF}}
+:root[data-theme="dark"]{--bg:#0A1128;--surface:#111B3D;--ink:#EEF1FA;--mute:#A4AFD0;--line:#26336B;--blue:#2F4BFF}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:var(--head);font-weight:800;line-height:.95;margin:0;letter-spacing:.01em}
+p{margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding:0 1.25rem}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:900 1.9rem var(--head);letter-spacing:.04em;display:flex;align-items:center;gap:.5rem}
+.logo i{width:12px;height:12px;background:var(--gold);transform:rotate(45deg);display:block}
+nav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0;align-items:center}
+nav a.l{padding:.5rem .95rem;border-radius:99px;font-weight:600;font-size:.95rem;color:var(--mute);transition:background .2s,color .2s}
+nav a.l:hover{color:var(--ink)}
+nav a.l.on{background:var(--ink);color:var(--bg)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.4rem;border-radius:99px;font-weight:700;border:2px solid transparent;cursor:pointer;font:700 .95rem var(--body);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.gold{background:var(--gold);color:#0B1536}
+.btn.line{border-color:currentColor;background:none;color:inherit}
+.btn.blue{background:var(--blue);color:#fff}
+.tools{display:flex;gap:.5rem;align-items:center}
+.ic{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font-size:1rem}
+#burger{display:none}
+section.page{display:none}
+section.page.show{display:block;animation:pg .45s ease both}
+@keyframes pg{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+/* hero */
+.hero{background:var(--blue);color:var(--onblue);overflow:hidden;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center;min-height:620px;padding-top:3rem;padding-bottom:3rem}
+.badge{display:inline-flex;gap:.6rem;align-items:center;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:.45rem 1rem;border-radius:99px;font-weight:600;font-size:.9rem}
+.badge b{width:9px;height:9px;border-radius:50%;background:var(--gold);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(244,180,0,0)}0%{box-shadow:0 0 0 0 rgba(244,180,0,.7)}}
+.hero h1{font-size:clamp(4.2rem,13vw,10.5rem);margin:1.2rem 0 .3rem;font-weight:900;line-height:.82}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:2px #fff;font-size:.5em;letter-spacing:.08em;margin-top:.1em}
+.hero p.lead{font-size:1.15rem;max-width:34ch;opacity:.92;margin:1.4rem 0 2rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.jersey{width:100%;max-width:400px;margin:auto;filter:drop-shadow(0 24px 30px rgba(0,0,20,.35))}
+.jersey .o{fill:none;stroke:#fff;stroke-width:3;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.2s .2s ease forwards}
+.jersey .f{fill:var(--gold);opacity:0;animation:fill .8s 1.9s ease forwards}
+.jersey .s{fill:none;stroke:#0B1536;stroke-width:2;stroke-dasharray:6 7;opacity:0;animation:fill .6s 2.3s forwards}
+.jersey text{opacity:0;animation:fill .6s 2.5s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fill{to{opacity:1}}
+.marq{background:var(--ink);color:var(--bg);overflow:hidden;white-space:nowrap;padding:.9rem 0}
+.marq div{display:inline-flex;gap:2.5rem;animation:mq 26s linear infinite;font:800 1.5rem var(--head);letter-spacing:.06em}
+.marq span::after{content:"";display:inline-block;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);margin-left:2.5rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* generic */
+.sec{padding:5.5rem 0}
+.sec h2{font-size:clamp(2.6rem,6vw,4.6rem);max-width:14ch}
+.sub{color:var(--mute);max-width:52ch;margin-top:1rem;font-size:1.05rem}
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3rem}
+.cat{position:relative;min-height:380px;border-radius:22px;padding:1.6rem;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;color:#fff;transition:transform .3s}
+.cat:hover{transform:translateY(-6px)}
+.cat h3{font-size:2.6rem}
+.cat p{opacity:.9;margin-top:.5rem;max-width:28ch}
+.cat .big{position:absolute;top:-.1em;right:.1em;font:900 11rem var(--head);opacity:.16;line-height:1}
+.c1{background:#1634E8}.c2{background:#0B1536;border:1px solid var(--line)}.c3{background:#B67F00}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:3rem;border-top:1px solid var(--line)}
+.step{padding:1.8rem 1.4rem 1.8rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:3rem 1fr;gap:.6rem}
+.step em{font:800 2rem var(--head);color:var(--blue);font-style:normal}
+.step h3{font-size:1.7rem;margin-bottom:.4rem}
+.step p{color:var(--mute);font-size:.95rem}
+.opening{background:var(--ink);color:var(--bg);border-radius:28px;padding:4rem 3rem;display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:center}
+.opening h2{max-width:none}
+.sp{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.sp div{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.5rem 1rem;text-align:center}
+.sp b{display:block;font-size:2.8rem;line-height:1.2}
+.sp span{font:800 1.5rem var(--head);letter-spacing:.04em}
+.bar{display:none}
+.info a{display:block;width:fit-content;font-weight:700;color:var(--ink);padding:.1rem 0;border-bottom:2px solid var(--gold);margin-top:.35rem}
+.opening p{opacity:.85;margin-top:1rem}
+.opening .t{font:800 1.6rem var(--head);color:var(--gold);margin-top:1.4rem}
+.page-head{padding:4.5rem 0 2.5rem;border-bottom:1px solid var(--line)}
+.page-head h1{font-size:clamp(3.4rem,10vw,7.5rem)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.two p+p{margin-top:1rem}
+.vals{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
+.val{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.5rem}
+.val h3{font-size:1.7rem;margin-bottom:.5rem}
+.val p{color:var(--mute);font-size:.95rem}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:2rem 0}
+.tab{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:99px;padding:.55rem 1.2rem;font:600 .92rem var(--body);cursor:pointer;transition:background .2s}
+.tab[aria-pressed="true"]{background:var(--blue);color:#fff;border-color:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--blue)}
+.card .sw{height:170px;display:grid;place-items:center;font:900 5rem var(--head);color:rgba(255,255,255,.9)}
+.card div.b{padding:1rem 1.1rem 1.2rem}
+.card h3{font-size:1.5rem}
+.card p{font-size:.88rem;color:var(--mute);margin-top:.35rem}
+.card[hidden]{display:none}
+.note{margin-top:2.5rem;padding:1.6rem;border-radius:18px;background:var(--surface);border:1px dashed var(--blue);display:flex;gap:1rem;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.cgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;margin-top:3rem;padding-bottom:5rem}
+.info div{padding:1.2rem 0;border-bottom:1px solid var(--line)}
+.info h3{font-size:1.5rem}
+.info p{color:var(--mute);margin-top:.2rem}
+form{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:2rem;display:grid;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:600;font-size:.9rem}
+input,select,textarea{font:inherit;padding:.8rem 1rem;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+#ok{display:none;padding:1rem;border-radius:12px;background:var(--gold);color:#0B1536;font-weight:700}
+footer{background:var(--ink);color:var(--bg);padding:3.5rem 0 2rem}
+footer .f{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2rem}
+footer a{display:block;opacity:.8;padding:.15rem 0}
+footer a:hover{opacity:1}
+footer small{display:block;margin-top:2.5rem;opacity:.6}
+@media(max-width:860px){
+.hero .wrap,.two,.cgrid,.opening{grid-template-columns:1fr}
+.hero .wrap{min-height:0}
+.cats,.steps{grid-template-columns:1fr}
+.grid{grid-template-columns:repeat(2,1fr)}
+#burger{display:inline-block}
+nav ul{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg);flex-direction:column;align-items:stretch;padding:1rem 1.25rem;border-bottom:1px solid var(--line)}
+nav ul.mopen{display:flex}
+.opening{padding:2.5rem 1.6rem}
+footer .f{grid-template-columns:1fr}
+.r2{grid-template-columns:1fr}
+.hide-m{display:none}}
+@media(max-width:860px){
+.hero .wrap{padding-top:2rem;padding-bottom:2.5rem;gap:1rem}
+.hero h1{font-size:5.2rem;margin-top:1rem}
+.hero p.lead{font-size:1.02rem;margin:1rem 0 1.4rem}
+.jersey{max-width:220px}
+.cta .btn{flex:1;justify-content:center}
+.sec{padding:3.5rem 0}
+.sec h2{font-size:2.7rem}
+.cats{gap:.8rem;margin-top:2rem}
+.cat{min-height:190px;padding:1.3rem;border-radius:18px}
+.cat h3{font-size:2.1rem}
+.cat .big{font-size:7rem}
+.step{padding:1.3rem 0}
+.sp{grid-template-columns:repeat(2,1fr);gap:.7rem}
+.sp b{font-size:2.2rem}
+.opening{padding:2.2rem 1.4rem;border-radius:20px}
+.page-head{padding:2.5rem 0 1.5rem}
+.page-head h1{font-size:4.2rem}
+.tabs{flex-wrap:nowrap;overflow-x:auto;margin:1.2rem -1.25rem;padding:0 1.25rem;scrollbar-width:none}
+.tab{white-space:nowrap;flex:none}
+.grid{gap:.7rem}
+.card .sw{height:96px;font-size:3.2rem}
+.card h3{font-size:1.2rem}
+.card p{font-size:.8rem}
+.card div.b{padding:.8rem}
+.note{padding:1.2rem}
+.cgrid{gap:1.5rem;margin-top:1.5rem;padding-bottom:3rem}
+form{padding:1.3rem;border-radius:18px}
+.logo{font-size:1.6rem}
+nav a.l{padding:.95rem .6rem;border-radius:12px;font-size:1.05rem}
+.bar{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line)}
+.bar a{text-align:center;padding:.8rem;border-radius:99px;font-weight:700}
+.bar .c{background:var(--gold);color:#0B1536}
+.bar .w{background:#1FA855;color:#fff}
+footer{padding-bottom:6rem}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important}.jersey .o{stroke-dashoffset:0}.jersey .f,.jersey .s,.jersey text{opacity:1}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#home" aria-label="DOXA Sports home"><svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l12 7v14l-12 7L4 23V9z" fill="#1634E8"/><path d="M16 2l12 7v14" fill="none" stroke="#F4B400" stroke-width="3"/><text x="16" y="22" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="17" fill="#fff">D</text></svg>DOXA SPORTS</a>
+<nav aria-label="Main"><ul id="menu">
+<li><a class="l" href="#home" data-p="home">Home</a></li>
+<li><a class="l" href="#about" data-p="about">About</a></li>
+<li><a class="l" href="#products" data-p="products">Products</a></li>
+<li><a class="l" href="#contact" data-p="contact">Contact</a></li>
+</ul></nav>
+<div class="tools"><a class="btn gold hide-m" href="#contact">Get a bulk quote</a><button class="ic" id="theme" aria-label="Switch light or dark theme">◐</button><button class="ic" id="burger" aria-label="Open menu" aria-expanded="false">☰</button></div>
+</div></header>
+
+<main>
+<!-- HOME -->
+<section class="page" id="home">
+<div class="hero"><div class="wrap">
+<div>
+<span class="badge"><b></b>Grand opening in Tirunelveli</span>
+<h1>DOXA<span>SPORTS</span></h1>
+<p class="lead">A new journey begins. Sports wear, casual wear and corporate wear, made in bulk.</p>
+<div class="cta"><a class="btn gold" href="#products">See our products</a><a class="btn line" href="#contact">Get a bulk quote</a></div>
+</div>
+<svg class="jersey" viewBox="0 0 300 330" role="img" aria-label="DOXA team jersey">
+<path class="f" d="M95 20 L60 40 L10 110 L48 140 L75 112 L75 305 L225 305 L225 112 L252 140 L290 110 L240 40 L205 20 Q150 72 95 20 Z"/>
+<path class="o" d="M95 20 L60 40 L10 110 L48 140 L75 112 L75 305 L225 305 L225 112 L252 140 L290 110 L240 40 L205 20 Q150 72 95 20 Z"/>
+<path class="s" d="M84 120 V292 H216 V120 M95 34 Q150 82 205 34"/>
+<text x="150" y="168" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="30" fill="#0B1536" letter-spacing="3">DOXA</text>
+<text x="150" y="262" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="104" fill="#0B1536">10</text>
+</svg>
+</div></div>
+<div class="marq" aria-hidden="true"><div><span>SPORTS WEAR</span><span>CASUAL WEAR</span><span>CORPORATE WEAR</span><span>BULK MANUFACTURING</span><span>SPORTS WEAR</span><span>CASUAL WEAR</span><span>CORPORATE WEAR</span><span>BULK MANUFACTURING</span></div></div>
+
+<div class="sec"><div class="wrap">
+<h2>Wear that fits every team.</h2>
+<p class="sub">Whether it is a cricket club, a school, or a company of ten thousand, we make the same garment the same way, every time.</p>
+<div class="cats">
+<a class="cat c1" href="#products" data-f="sports"><span class="big">S</span><h3>Sports wear</h3><p>Jerseys, tees and track wear for teams and academies.</p></a>
+<a class="cat c2" href="#products" data-f="casual"><span class="big">C</span><h3>Casual wear</h3><p>Everyday tees, polos and hoodies in soft, durable fabric.</p></a>
+<a class="cat c3" href="#products" data-f="corporate"><span class="big">W</span><h3>Corporate wear</h3><p>Uniforms and branded apparel for offices and events.</p></a>
+</div></div></div>
+
+<div class="sec" style="padding-top:0"><div class="wrap">
+<h2>From fabric to finished pack.</h2>
+<p class="sub">Every order follows the same six stages, so bulk quantities arrive consistent.</p>
+<div class="steps">
+<div class="step"><em>1</em><div><h3>Cutting</h3><p>Accurate pattern cutting so every size matches.</p></div></div>
+<div class="step"><em>2</em><div><h3>Sewing</h3><p>Trained operators and clean, strong stitching.</p></div></div>
+<div class="step"><em>3</em><div><h3>Printing</h3><p>Names, numbers and logos printed in-house.</p></div></div>
+<div class="step"><em>4</em><div><h3>Embroidery</h3><p>Crisp embroidered logos for corporate and club wear.</p></div></div>
+<div class="step"><em>5</em><div><h3>Sublimation</h3><p>Full-colour custom designs that never peel.</p></div></div>
+<div class="step"><em>6</em><div><h3>Inspection and packing</h3><p>Quality checks, then packed to your count and label.</p></div></div>
+</div></div></div>
+
+<div class="sec" style="padding-top:0"><div class="wrap">
+<h2>Every game, one supplier.</h2>
+<p class="sub">Match kits and training wear for the sports your team plays.</p>
+<div class="sp"><div><b>🏏</b><span>Cricket</span></div><div><b>🏀</b><span>Basketball</span></div><div><b>🏐</b><span>Volleyball</span></div><div><b>⚽</b><span>Football</span></div></div>
+</div></div>
+
+<div class="sec" style="padding-top:0"><div class="wrap"><div class="opening">
+<div><h2>A new journey begins!</h2>
+<p>With dreams, passion and hard work, we are stepping into a new beginning. Your love, blessings and support mean everything to us. Please support our new venture and be a part of our journey.</p>
+<div class="t">Keep supporting! Keep blessing!</div></div>
+<div><p style="font-size:1.1rem;opacity:1;margin:0">Grand opening</p><h3 style="font-size:4rem;color:var(--gold);margin:.3rem 0 1rem">Tirunelveli</h3><a class="btn gold" href="#contact">Visit or enquire</a><p style="margin-top:1.2rem">With love, Team DOXA SPORTS</p></div>
+</div></div></div>
+</section>
+
+<!-- ABOUT -->
+<section class="page" id="about">
+<div class="page-head"><div class="wrap"><h1>About<br>DOXA</h1></div></div>
+<div class="sec"><div class="wrap">
+<div class="two">
+<div><h2>Built on passion and hard work.</h2></div>
+<div>
+<p>DOXA Sports is a new apparel brand from Tirunelveli. We began with a simple dream: make sports wear, casual wear and corporate wear that looks sharp, feels good and arrives on time.</p>
+<p>We specialise in bulk manufacturing. Teams, schools, companies and shops can order from ten pieces to many thousands, and we customise names, numbers, logos and colours for each order.</p>
+<p>We are just opening our doors, and every customer who trusts us early becomes part of how we grow.</p>
+</div></div>
+<div class="vals">
+<div class="val"><h3>Made to order</h3><p>Fabric, fit, colour and branding set around what you need.</p></div>
+<div class="val"><h3>Bulk ready</h3><p>Small team orders and large corporate runs, handled the same way.</p></div>
+<div class="val"><h3>Quality checked</h3><p>Every garment is inspected before it is packed.</p></div>
+<div class="val"><h3>Honest and local</h3><p>Rooted in Tirunelveli, answerable to every customer we serve.</p></div>
+</div>
+</div></div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="page" id="products">
+<div class="page-head"><div class="wrap"><h1>Products</h1></div></div>
+<div class="sec" style="padding-top:2.5rem"><div class="wrap">
+<div class="tabs" role="group" aria-label="Filter products">
+<button class="tab" data-f="all" aria-pressed="true">All</button>
+<button class="tab" data-f="sports" aria-pressed="false">Sports wear</button>
+<button class="tab" data-f="casual" aria-pressed="false">Casual wear</button>
+<button class="tab" data-f="corporate" aria-pressed="false">Corporate wear</button>
+</div>
+<div class="grid" id="grid">
+<div class="card" data-c="sports"><div class="sw" style="background:#1634E8">J</div><div class="b"><h3>Team jerseys</h3><p>Custom names, numbers and sublimation prints.</p></div></div>
+<div class="card" data-c="sports"><div class="sw" style="background:#0F7B6C">T</div><div class="b"><h3>Track wear</h3><p>Track pants and jackets for training and travel.</p></div></div>
+<div class="card" data-c="sports"><div class="sw" style="background:#C23B22">D</div><div class="b"><h3>Dry-fit tees</h3><p>Light, breathable tees for every sport.</p></div></div>
+<div class="card" data-c="sports"><div class="sw" style="background:#6A3FC8">S</div><div class="b"><h3>Shorts</h3><p>Comfortable fit with a secure waistband.</p></div></div>
+<div class="card" data-c="casual"><div class="sw" style="background:#0B1536">R</div><div class="b"><h3>Round-neck tees</h3><p>Soft cotton tees in plain and printed styles.</p></div></div>
+<div class="card" data-c="casual"><div class="sw" style="background:#B67F00">P</div><div class="b"><h3>Polo tees</h3><p>Smart-casual polos with embroidered logos.</p></div></div>
+<div class="card" data-c="casual"><div class="sw" style="background:#2E6FD8">H</div><div class="b"><h3>Hoodies and sweatshirts</h3><p>Warm, durable pieces for cooler days.</p></div></div>
+<div class="card" data-c="casual"><div class="sw" style="background:#7A8499">W</div><div class="b"><h3>Walk shorts</h3><p>Easy everyday shorts for men and women.</p></div></div>
+<div class="card" data-c="corporate"><div class="sw" style="background:#1634E8">U</div><div class="b"><h3>Office uniforms</h3><p>Matching shirts and tees for staff in any size.</p></div></div>
+<div class="card" data-c="corporate"><div class="sw" style="background:#0B1536">E</div><div class="b"><h3>Event tees</h3><p>Branded tees for launches, camps and promotions.</p></div></div>
+<div class="card" data-c="corporate"><div class="sw" style="background:#0F7B6C">C</div><div class="b"><h3>Caps and accessories</h3><p>Caps and add-ons with your logo.</p></div></div>
+<div class="card" data-c="corporate"><div class="sw" style="background:#C23B22">K</div><div class="b"><h3>School and kids wear</h3><p>Uniforms and sports outfits in kids' sizes.</p></div></div>
+</div>
+<div class="note"><div><h3 style="font-size:1.8rem">Need a custom design?</h3><p class="sub" style="margin:.3rem 0 0">Tell us your quantity and logo. We reply with a quote.</p></div><a class="btn blue" href="#contact">Get a bulk quote</a></div>
+</div></div>
+</section>
+
+<!-- CONTACT -->
+<section class="page" id="contact">
+<div class="page-head"><div class="wrap"><h1>Contact</h1></div></div>
+<div class="wrap"><div class="cgrid">
+<div class="info">
+<div><h3>Visit us</h3><p>DOXA SPORTS, Tirunelveli, Tamil Nadu</p></div>
+<div><h3>Call or WhatsApp</h3><a href="tel:+919600423793">96004 23793</a><a href="tel:+918189967463">81899 67463</a><a href="tel:+918056420494">80564 20494</a></div>
+<div><h3>Email</h3><a href="mailto:doxasports2026@gmail.com">doxasports2026@gmail.com</a></div>
+<div><h3>What we make</h3><p>Sports wear, casual wear, corporate wear. Bulk manufacturing.</p></div>
+</div>
+<form id="form">
+<h2 style="font-size:2.6rem">Get a bulk quote</h2>
+<div class="r2"><label>Name<input required name="n" autocomplete="name"></label><label>Phone<input required name="p" type="tel" autocomplete="tel"></label></div>
+<div class="r2"><label>I need<select name="t"><option>Sports wear</option><option>Casual wear</option><option>Corporate wear</option></select></label><label>Quantity<input name="q" placeholder="e.g. 50 pieces"></label></div>
+<label>Message<textarea rows="4" name="m" placeholder="Tell us about your team, logo or deadline"></textarea></label>
+<button class="btn blue" type="submit">Send on WhatsApp</button>
+<div id="ok" role="status">WhatsApp is opening with your enquiry. Press send to reach us.</div>
+</form>
+</div></div>
+</section>
+</main>
+
+<footer><div class="wrap">
+<div class="f">
+<div><div class="logo" style="color:var(--bg)"><i></i>DOXA SPORTS</div><p style="opacity:.75;margin-top:.8rem;max-width:34ch">Sports wear, casual wear and corporate wear. Bulk manufacturing from Tirunelveli.</p></div>
+<div><strong>Pages</strong><a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#contact">Contact</a></div>
+<div><strong>Wear</strong><a href="#products">Sports wear</a><a href="#products">Casual wear</a><a href="#products">Corporate wear</a><strong style="display:block;margin-top:1rem">Contact</strong><a href="tel:+919600423793">96004 23793</a><a href="mailto:doxasports2026@gmail.com">doxasports2026@gmail.com</a></div>
+</div>
+<small>© 2026 DOXA SPORTS. All rights reserved.</small>
+</div></footer>
+
+<div class="bar"><a class="c" href="tel:+919600423793">Call now</a><a class="w" href="https://wa.me/919600423793" target="_blank" rel="noopener">WhatsApp</a></div>
+<script>
+var pages=["home","about","products","contact"];
+function go(){
+ var h=(location.hash||"#home").slice(1);
+ if(pages.indexOf(h)<0)h="home";
+ pages.forEach(function(p){document.getElementById(p).classList.toggle("show",p===h)});
+ document.querySelectorAll("a.l").forEach(function(a){a.classList.toggle("on",a.dataset.p===h)});
+ document.getElementById("menu").classList.remove("mopen");
+ document.getElementById("burger").setAttribute("aria-expanded","false");
+ window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",go);go();
+document.getElementById("burger").onclick=function(){var m=document.getElementById("menu");var o=m.classList.toggle("mopen");this.setAttribute("aria-expanded",o)};
+function filt(f){
+ document.querySelectorAll(".tab").forEach(function(t){t.setAttribute("aria-pressed",t.dataset.f===f)});
+ document.querySelectorAll("#grid .card").forEach(function(c){c.hidden=!(f==="all"||c.dataset.c===f)});
+}
+document.querySelectorAll(".tab").forEach(function(t){t.onclick=function(){filt(t.dataset.f)}});
+document.querySelectorAll(".cat").forEach(function(c){c.addEventListener("click",function(){filt(c.dataset.f)})});
+document.getElementById("form").addEventListener("submit",function(e){e.preventDefault();var d=new FormData(this);var t="Hi DOXA SPORTS, I need a bulk quote.%0AName: "+encodeURIComponent(d.get("n"))+"%0APhone: "+encodeURIComponent(d.get("p"))+"%0ACategory: "+encodeURIComponent(d.get("t"))+"%0AQuantity: "+encodeURIComponent(d.get("q")||"-")+"%0AMessage: "+encodeURIComponent(d.get("m")||"-");document.getElementById("ok").style.display="block";window.open("https://wa.me/919600423793?text="+t,"_blank");this.reset()});
+var tb=document.getElementById("theme");
+tb.onclick=function(){var r=document.documentElement;var d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=d?"light":"dark"};
+</script>
+</body>
+</html>
